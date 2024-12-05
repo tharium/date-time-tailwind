@@ -1,38 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tailwind CSS Starter Kit</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind CSS Styled Clock</title>
 
-    <link rel="stylesheet" href="style.css">
-
-    <script src="time.js" defer></script>
-    <script src="date.js" defer></script>
-
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="time.js" defer></script>
+  <script src="date.js" defer></script>
 </head>
-<body>
 
-    <main>
-  
-        <!-- Time -->
-        <time class="time">
-                <data class="hours">HH</data> :
-                <data class="minutes">MM</data> :
-                <data class="seconds">SS</data>
-                <data class="amOrPM">AM/PM</data>
-            </time>
-      
-          
-        <!-- Date -->
-        <time class="date">
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
+
+  <main class="text-center space-y-8 p-6 bg-gray-800 rounded-lg shadow-lg">
+      <!-- Time -->
+      <time class="time text-4xl font-mono font-bold space-x-2">
+          <data class="hours">HH</data> :
+          <data class="minutes">MM</data> :
+          <data class="seconds">SS</data>
+          <data class="amOrPM text-lg align-top">AM/PM</data>
+      </time>
+
+      <!-- Date -->
+      <time class="date text-xl font-mono space-x-2">
           <data class="month">Month</data>
-          <data class="dayOfMonth">00</data>,
-          <data class="year">0000</data> -
-          <data class="dayOfWeek">SMTWTFS</data>
-        </time>
-      
-      </main>
-    
+          <data class="dayOfMonth font-semibold">00</data>,
+          <data class="year font-light">0000</data> -
+          <data class="dayOfWeek uppercase tracking-wide">SMTWTFS</data>
+      </time>
+  </main>
+
 </body>
+
 </html>
