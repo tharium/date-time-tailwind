@@ -8,19 +8,26 @@
   <script src="date.js" defer></script>
 </head>
 
-<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
+<body id="dynamicBg"
+class="bg-gray-900 bg-cover bg-center text-white flex items-center justify-center min-h-screen">
 
-  <main class="text-center space-y-8 p-6 bg-gray-800 rounded-lg shadow-lg">
+  <main class="grid grid-rows-[auto_auto] gap-4 p-6 bg-gray-800 rounded-lg shadow-lg max-w-xs">
       <!-- Time -->
-      <time class="time text-4xl font-mono font-bold space-x-2">
-          <data class="hours">HH</data> :
-          <data class="minutes">MM</data> :
-          <data class="seconds">SS</data>
-          <data class="amOrPM text-lg align-top">AM/PM</data>
+      <time class="flex items-center space-x-4">
+          <data class="hours text-8xl font-mono font-bold justify-self-start">HH</data>
+          <div class="flex flex-col items-end justify-self-end">
+              <data class="minutes text-6xl font-mono font-bold">MM</data>
+              <data class="seconds text-2x1 font-mono font-light">SS</data>
+          </div>
+          <data class="amOrPM text-lg font-mono col-span-2 justify-self-center">AM/PM</data>
+          <span id="timeIcon" class="ml-4 text-yellow-500">
+              <!-- Default Icon -->
+               ☀
+          </span>
       </time>
 
       <!-- Date -->
-      <time class="date text-xl font-mono space-x-2">
+      <time class="text-center text-sm font-mono space-x-2">
           <data class="month">Month</data>
           <data class="dayOfMonth font-semibold">00</data>,
           <data class="year font-light">0000</data> -

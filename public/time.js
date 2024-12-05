@@ -64,4 +64,32 @@ const theClockApp = () => {
     ************/
     // Re-run `theClockApp` every 1 second (1000 ms)
     setInterval(theClockApp, 1000);
+
+    // Function to update the sun/moon icon based on the time of day
+    document.addEventListener("DOMContentLoaded", () => {
+        const timeIcon = document.getElementById('timeIcon');
+    
+        function updateTimeIcon() {
+            const now = new Date();
+            const hours = now.getHours();
+    
+            if (hours >= 6 && hours < 18) {
+                // day
+                timeIcon.textContent = '🌞';
+                timeIcon.classList.remove('text-gray-500');
+                timeIcon.classList.add('text-yellow-500');
+            } else {
+                // night(ish)
+                timeIcon.textContent = '🌙';
+                timeIcon.classList.remove('text-yellow-500');
+                timeIcon.classList.add('text-gray-500');
+            }
+        }
+    
+        // call the function once when the page loads
+        updateTimeIcon();
+    
+        // update the icon every minute
+        setInterval(updateTimeIcon, 60000);
+    });
     
