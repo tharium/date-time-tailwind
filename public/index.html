@@ -9,9 +9,20 @@
 </head>
 
 <body id="dynamicBg"
-class="bg-gray-900 bg-cover bg-center text-white flex items-center justify-center min-h-screen">
+class="bg-gray-900 bg-[length:1450px_1020px] bg-center bg-no-repeat text-white flex items-center justify-center min-h-screen">
+<header class="absolute top-4 left-4 flex items-center space-x-4">
+  <span id="currentTimeZone" class="text-lg font-bold">Current Time Zone: EST</span>
+  <select id="timeZoneSelector" class="bg-gray-800 text-white rounded-lg p-2">
+    <option value="EST">Eastern (EST)</option>
+    <option value="CST">Central (CST)</option>
+    <option value="MST">Mountain (MST)</option>
+    <option value="PST">Pacific (PST)</option>
+    <option value="AKST">Alaska (AKST)</option>
+    <option value="HST">Hawaii (HST)</option>
+  </select>
+</header>
 
-  <main class="grid grid-rows-[auto_auto] gap-4 p-6 bg-gray-800 rounded-lg shadow-lg max-w-xs">
+  <main class="grid grid-rows-[auto_auto] gap-4 p-6 bg-opacity-75 bg-gray-800 rounded-lg shadow-lg max-w-xs">
       <!-- Time -->
       <time class="flex items-center space-x-4">
           <data class="hours text-8xl font-mono font-bold justify-self-start">HH</data>
